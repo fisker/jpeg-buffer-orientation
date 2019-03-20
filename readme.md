@@ -1,6 +1,6 @@
 # jpeg-buffer-orientation
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs?compression=gzip)](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs?compression=gzip&style=flat-square)](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs)
 
 [![Travis](https://img.shields.io/travis/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://travis-ci.org/fisker/jpeg-buffer-orientation)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1c92423809b450e871e4812581f8fe6)](https://app.codacy.com/app/fisker/jpeg-buffer-orientation?utm_source=github.com&utm_medium=referral&utm_content=fisker/jpeg-buffer-orientation&utm_campaign=Badge_Grade_Settings)

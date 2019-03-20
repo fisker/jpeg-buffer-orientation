@@ -4,7 +4,10 @@ import isBoolean from './is-boolean'
 
 function validateEXIFData(view, offset) {
   // Not valid EXIF data! NO 'Exif' found
-  if (view.getUint32(offset) !== EXIF_START) {
+  if (
+    view.getUint32(offset) !== EXIF_START ||
+    view.getUint16(offset + 4) !== 0x0000
+  ) {
     return false
   }
 

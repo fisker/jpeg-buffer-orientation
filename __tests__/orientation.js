@@ -35,7 +35,7 @@ describe('jpeg image orientation', () => {
 })
 
 describe('non-jpeg image orientation', () => {
-  test(`non-jepg file orientation should be null`, () => {
+  test(`text file orientation should be null`, () => {
     const {buffer} = readFileSync(__filename)
     const result = getOrientation(buffer)
     expect(result).toBe(null)

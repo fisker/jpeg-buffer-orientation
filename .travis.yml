@@ -6,6 +6,7 @@ node_js:
 sudo: false
 cache: yarn
 script:
+  - yarn build
   - yarn test-coverage
 after_script:
   - npm install --global codecov coveralls codacy-coverage

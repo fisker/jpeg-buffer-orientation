@@ -1,0 +1,43 @@
+import {readFileSync} from 'fs'
+import {join} from 'path'
+
+import getOrientation from '..'
+
+const fixtureDir = join(__dirname, 'fixture')
+const fixtures = [
+  ...Array.from({length: 8}, (_, index) => ({
+    name: `image_${index + 1}.jpg`,
+    orientation: index + 1,
+  })),
+  {
+    name: `image_no_orientation.jpg`,
+    orientation: null,
+  },
+  {
+    name: `image_unknown_orientation.jpg`,
+    orientation: null,
+  },
+].map(fixture => ({
+  ...fixture,
+  file: join(fixtureDir, fixture.name),
+}))
+
+describe('jpeg image orientation', () => {
+  for (const image of fixtures) {
+    const {name, file, orientation} = image
+
+    test(`${name} orientation should be ${orientation}`, () => {
+      const {buffer} = readFileSync(file)
+      const result = getOrientation(buffer)
+      expect(result).toBe(orientation)
+    })
+  }
+})
+
+describe('non-jpeg image orientation', () => {
+  test(`non-jepg file orientation should be null`, () => {
+    const {buffer} = readFileSync(__filename)
+    const result = getOrientation(buffer)
+    expect(result).toBe(null)
+  })
+})

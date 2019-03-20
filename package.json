@@ -17,7 +17,6 @@
     "docs:js": "cpy lib docs/lib",
     "docs:image": "cpy __tests__/fixture docs/images",
     "docs:html": "cpy src/index.html docs",
-    "build:html": "rollup --config",
     "prettier": "prettier --write",
     "dist": "npm-run-all dist:*",
     "dist:npm": "np --yolo --no-yarn",

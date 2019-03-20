@@ -1,8 +1,22 @@
 import babel from 'rollup-plugin-babel'
 import filesize from 'rollup-plugin-filesize'
+import prettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
 
-const plugins = [babel(), filesize()]
+const prettierConfig = {
+  ...require('./prettier.config'),
+  parser: 'babel',
+  singleQuote: true,
+}
+
+const plugins = [
+  babel(),
+  prettier({
+    ...prettierConfig,
+    sourceMap: true,
+  }),
+  filesize(),
+]
 
 const minify = [babel(), terser(), filesize()]
 

@@ -25,7 +25,7 @@
     "test-coverage": "jest --coverage",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint src/**/*.js --fix",
-    "release": "run-s clean lint build test docs dist",
+    "release": "run-s clean lint build test dist",
     "test": "jest"
   },
   "config": {

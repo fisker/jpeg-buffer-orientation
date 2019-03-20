@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-  figure {
-    border: 1px solid #ccc;
-    flex-basis: 300px;
-    padding: 10px;
-    vertical-align: top;
-    margin: 5px;
-  }
+      figure {
+        border: 1px solid #ccc;
+        flex-basis: 300px;
+        padding: 10px;
+        vertical-align: top;
+        margin: 5px;
+      }
 
-  img {
-    width: 200px;
-  }
+      img {
+        width: 200px;
+      }
 
-  a,
-  img {
-    display: block
-  }
-  </style>
-</head>
-<body>
-  <h1>
-    <a href="https://github.com/fisker/jpeg-buffer-orientation">jpeg-buffer-orientation</a>
-  </h1>
+      a,
+      img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <a href="https://github.com/fisker/jpeg-buffer-orientation">
+        jpeg-buffer-orientation
+      </a>
+    </h1>
 
-  <em>get orientation from a jpeg buffer</em>
+    <em>get orientation from a jpeg buffer</em>
 
-  <hr>
+    <hr />
 
-  <div id="js-result" class="container">
+    <div id="js-result" class="container"></div>
 
-  </div>
+    <script type="module">
+      import getOrientation from './lib/index.min.mjs'
 
+      const images = [
+        ...Array.from({length: 8}, (_, index) => `image_${index + 1}.jpg`),
+        'image_no_orientation.jpg',
+        'image_unknown_orientation.jpg',
+        'image_png.png',
+      ]
 
-  <script type="module">
-    import getOrientation from './lib/index.min.mjs'
+      const result = document.getElementById('js-result')
 
-    const images = [
-      ...Array.from({length: 8}, (_, index) => `image_${index + 1}.jpg`),
-      'image_no_orientation.jpg',
-      'image_unknown_orientation.jpg',
-      'image_png.png',
-    ]
+      async function getOrientationFromUrl(url) {
+        const response = await fetch(url)
+        const buffer = await response.arrayBuffer()
 
-    const result = document.getElementById('js-result')
+        return getOrientation(buffer)
+      }
 
-    async function getOrientationFromUrl(url) {
-      const response = await fetch(url)
-      const buffer = await response.arrayBuffer()
+      for (const image of images) {
+        ;(async () => {
+          const url = `./images/${image}`
+          const container = document.createElement('figure')
+          result.appendChild(container)
 
-      return getOrientation(buffer)
-    }
-
-    for (const image of images) {
-      ;(async () => {
-        const url = `./images/${image}`
-        const container = document.createElement('figure')
-        result.appendChild(container)
-
-
-        container.innerHTML = `
+          container.innerHTML = `
           <a href="${url}" target="_blank" noopener><img src="${url}"></a>
           <figcaption>${image}</figcaption>
           <p>orientation: <span class="js-orientation">loading...</span></p>
         `
 
-
-        const orientation = await getOrientationFromUrl(url)
-        container.querySelector('.js-orientation').textContent = String(orientation)
-
-      })()
-    }
-  </script>
-</body>
+          const orientation = await getOrientationFromUrl(url)
+          container.querySelector('.js-orientation').textContent = String(
+            orientation
+          )
+        })()
+      }
+    </script>
+  </body>
 </html>

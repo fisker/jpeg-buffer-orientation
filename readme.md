@@ -1,5 +1,19 @@
 # jpeg-buffer-orientation
 
+[![gzip size](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs?compression=gzip)](http://img.badgesize.io/https://unpkg.com/jpeg-buffer-orientation/lib/index.min.mjs)
+
+[![Travis](https://img.shields.io/travis/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://travis-ci.org/fisker/jpeg-buffer-orientation)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1c92423809b450e871e4812581f8fe6)](https://app.codacy.com/app/fisker/jpeg-buffer-orientation?utm_source=github.com&utm_medium=referral&utm_content=fisker/jpeg-buffer-orientation&utm_campaign=Badge_Grade_Settings)
+
+[![devDependencies](https://img.shields.io/david/dev/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://david-dm.org/fisker/jpeg-buffer-orientation)
+[![Issues](http://img.shields.io/github/issues/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://github.com/fisker/jpeg-buffer-orientation/issues)
+[![Issues](https://img.shields.io/github/issues-pr/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://github.com/fisker/jpeg-buffer-orientation/pulls)
+[![GitHub last commit](https://img.shields.io/github/last-commit/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://github.com/fisker/jpeg-buffer-orientation/commits)
+[![GitHub Release Date](https://img.shields.io/github/release-date/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://github.com/fisker/jpeg-buffer-orientation/releases)
+
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![MIT license](https://img.shields.io/github/license/fisker/jpeg-buffer-orientation.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
 > get orientation from a jpeg buffer
 
 ## Install

@@ -13,6 +13,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:js": "rollup --config",
+    "version": "npm-run-all docs && git add docs",
     "docs": "npm-run-all docs:*",
     "docs:js": "cpy lib docs/lib",
     "docs:image": "cpy __tests__/fixture docs/images",

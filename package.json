@@ -13,7 +13,6 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:js": "rollup --config",
-    "version": "npm-run-all docs && git add docs",
     "docs": "npm-run-all docs:*",
     "docs:js": "cpy lib docs/lib",
     "docs:image": "cpy __tests__/fixture docs/images",
@@ -25,7 +24,7 @@
     "test-coverage": "jest --coverage",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint src/**/*.js --fix",
-    "release": "run-s clean lint build test dist",
+    "release": "run-s clean lint build test docs dist",
     "test": "jest"
   },
   "config": {

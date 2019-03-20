@@ -1,7 +1,7 @@
 import {readFileSync} from 'fs'
 import {join} from 'path'
 
-import getOrientation from '..'
+import getOrientation from '../src'
 
 const fixtureDir = join(__dirname, 'fixture')
 const fixtures = [

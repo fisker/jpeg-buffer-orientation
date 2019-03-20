@@ -16,6 +16,11 @@ function getOrientation(view, offset) {
 
   for (let i = 0; i < tags; i++) {
     const entryOffset = dirStart + i * 12 + 2
+
+    if (entryOffset > view.byteLength - 16) {
+      return null
+    }
+
     // skip type check
     // var type = view.getUint16(entryOffset+2, littleEndian)
     // var numValues = view.getUint32(entryOffset+4, littleEndian)

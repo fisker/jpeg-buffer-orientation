@@ -11,7 +11,7 @@
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npm-run-all build:* --serial docs",
+    "build": "npm-run-all build:*",
     "build:js": "rollup --config",
     "docs": "npm-run-all docs:*",
     "docs:js": "cpy lib docs/lib",
@@ -25,7 +25,7 @@
     "test-coverage": "jest --coverage",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint src/**/*.js --fix",
-    "release": "run-s clean lint build test dist",
+    "release": "run-s clean lint build test docs dist",
     "test": "jest"
   },
   "config": {
@@ -36,9 +36,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",

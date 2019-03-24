@@ -14,7 +14,7 @@ function getOrientation(view, offset) {
   const tags = view.getUint16(firstIFDOffset, littleEndian)
   const dirStart = tiffOffset + firstIFDOffset
 
-  for (let i = 0; i < tags; i++) {
+  for (let i = 0; i < tags; i += 1) {
     const entryOffset = dirStart + i * 12 + 2
 
     if (entryOffset > view.byteLength - 16) {

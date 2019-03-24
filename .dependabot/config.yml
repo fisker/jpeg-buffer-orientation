@@ -1,6 +1,6 @@
 # config file for `dependabot`
 #
-# update: wget https://git.io/fhAJq
+# update: wget -O config.yml https://git.io/fjJKB
 # document: https://dependabot.com/docs/config-file/
 #
 
@@ -23,4 +23,4 @@ update_configs:
           update_type: "security:patch"
 
     # auto update package.json
-    version_requirement_updates: "auto"
+    version_requirement_updates: "increase_versions"

@@ -8,7 +8,11 @@
   "unpkg": "lib/index.min.js",
   "jsdelivr": "lib/index.min.js",
   "repository": "git@github.com:fisker/jpeg-buffer-orientation.git",
-  "author": "fisker <lionkay@gmail.com>",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all build:*",
@@ -46,6 +50,7 @@
     "cpy-cli": "^2.0.0",
     "cz-conventional-changelog-emoji": "^0.1.0",
     "eslint": "^5.15.2",
+    "eslint-config-fisker": "^4.0.1",
     "husky": "^1.3.1",
     "jest": "^24.5.0",
     "lint-staged": "^8.1.5",

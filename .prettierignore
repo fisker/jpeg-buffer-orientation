@@ -22,6 +22,4 @@ dist/**
 **/fixtures/**
 
 # project glob
-docs/**
-coverage/**
 

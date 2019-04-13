@@ -5,7 +5,7 @@ import glob from 'fast-glob'
 
 import getOrientation from '../src'
 
-const directory = join(__dirname, 'exif-samples/jpg')
+const directory = join(__dirname, 'exif-samples')
 const fixtures = glob
   .sync('**/*.{jpg,jpeg}', {
     cwd: directory,

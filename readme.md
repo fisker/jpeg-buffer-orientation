@@ -4,6 +4,7 @@
 
 [![Travis](https://img.shields.io/travis/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://travis-ci.org/fisker/jpeg-buffer-orientation)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1c92423809b450e871e4812581f8fe6)](https://app.codacy.com/app/fisker/jpeg-buffer-orientation?utm_source=github.com&utm_medium=referral&utm_content=fisker/jpeg-buffer-orientation&utm_campaign=Badge_Grade_Settings)
+[![Coveralls github](https://img.shields.io/coveralls/github/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://coveralls.io/github/fisker/jpeg-buffer-orientation)
 
 [![devDependencies](https://img.shields.io/david/dev/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://david-dm.org/fisker/jpeg-buffer-orientation)
 [![Issues](http://img.shields.io/github/issues/fisker/jpeg-buffer-orientation.svg?style=flat-square)](https://github.com/fisker/jpeg-buffer-orientation/issues)

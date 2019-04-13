@@ -22,4 +22,7 @@ dist/**
 **/fixtures/**
 
 # project glob
+docs/**
+coverage/**
+test/exif-samples/**
 

@@ -29,9 +29,9 @@ in browser
 
 ```html
 <script type="module">
-  import getOrientation from "https://unpkg.com/jpeg-buffer-orientation?module"
+  import getOrientation from 'https://unpkg.com/jpeg-buffer-orientation?module'
 
-  const myJPEGFile = "path/to/a/jpeg/file"
+  const myJPEGFile = 'path/to/a/jpeg/file'
 
   // this time we use fetch to get a ArrayBuffer
 
@@ -40,7 +40,7 @@ in browser
     const buffer = await response.arrayBuffer()
     const orientation = getOrientation(buffer)
 
-    console.log("orientation", orientation)
+    console.log('orientation', orientation)
   })()
 </script>
 ```
@@ -67,12 +67,12 @@ in browser (legacy)
 in node
 
 ```js
-import getOrientation from "jpeg-buffer-orientation"
+import getOrientation from 'jpeg-buffer-orientation'
 
-const myJPEGFile = "path/to/a/jpeg/file"
+const myJPEGFile = 'path/to/a/jpeg/file'
 const {buffer} = readFileSync(myJPEGFile)
 const orientation = getOrientation(buffer)
-console.log("orientation", orientation)
+console.log('orientation', orientation)
 ```
 
 ## API

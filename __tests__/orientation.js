@@ -3,7 +3,7 @@ import {join} from 'path'
 
 import getOrientation from '../src'
 
-const fixtureDir = join(__dirname, 'fixture')
+const fixtureDirectory = join(__dirname, 'fixture')
 const fixtures = [
   ...Array.from({length: 8}, (_, index) => ({
     name: `image_${index + 1}.jpg`,
@@ -19,7 +19,7 @@ const fixtures = [
   },
 ].map(fixture => ({
   ...fixture,
-  file: join(fixtureDir, fixture.name),
+  file: join(fixtureDirectory, fixture.name),
 }))
 
 describe('jpeg image orientation', () => {

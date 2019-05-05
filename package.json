@@ -53,7 +53,7 @@
     "@fisker/eslint-config-jest": "^1.0.2",
     "@fisker/lint-staged-config": "^1.0.1",
     "@fisker/prettier-config": "^1.0.12",
-    "babel-jest": "^24.7.1",
+    "babel-jest": "^24.8.0",
     "cpy-cli": "^2.0.0",
     "cz-conventional-changelog-emoji": "^0.1.0",
     "eslint": "^5.16.0",

@@ -7,4 +7,6 @@
 
 /* @fisker/husky-config https://git.io/fjCe9 */
 
-module.exports = require('@fisker/husky-config')
+module.exports = require('@fisker/husky-config').prepend({
+  'pre-commit': ['run-s build docs', 'git add docs'],
+})

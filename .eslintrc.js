@@ -9,14 +9,15 @@
 
 module.exports = {
   root: true,
+  env: {},
   parserOptions: {},
   extends: ['@fisker'],
   settings: {},
   rules: {},
   plugins: [],
-  overrides: [],
   globals: {
     Uint8Array: false,
     DataView: false,
   },
+  overrides: [],
 }

@@ -21,16 +21,18 @@
     "docs:js": "cpy lib docs/lib",
     "docs:image": "cpy __tests__/fixture docs/images",
     "docs:html": "cpy src/index.html docs",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "clean": "rimraf lib docs",
     "test-coverage": "jest --coverage",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:eslint": "eslint **/*.{js,mjs,vue}",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build test docs dist",
-    "test": "jest"
+    "release": "run-s clean lint build test docs format dist",
+    "test": "jest",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "config": {
     "commitizen": {

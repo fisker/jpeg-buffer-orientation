@@ -6,7 +6,7 @@ function getOrientation(view, offset) {
   const result = validateEXIFData(view, offset)
 
   if (!result) {
-    return null
+    return
   }
 
   const {tiffOffset, littleEndian, firstIFDOffset} = result
@@ -18,7 +18,7 @@ function getOrientation(view, offset) {
     const entryOffset = start + i * 12 + 2
 
     if (entryOffset > view.byteLength - 16) {
-      return null
+      return
     }
 
     // skip type check
@@ -28,13 +28,11 @@ function getOrientation(view, offset) {
     if (tiffTagNumber === TIFF_ORIENTATION_TAG_NO) {
       const orientation = view.getUint16(entryOffset + 8, littleEndian)
       if (orientation < 1 || orientation > 8) {
-        return null
+        return
       }
       return orientation
     }
   }
-
-  return null
 }
 
 export default getOrientation

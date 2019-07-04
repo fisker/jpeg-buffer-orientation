@@ -23,7 +23,9 @@ describe('more jpeg test', () => {
       const {buffer} = readFileSync(file)
       const result = getOrientation(buffer)
 
-      expect(typeof result === 'number' || result === null).toBe(true)
+      const type = typeof result
+
+      expect(type === 'number' || type === 'undefined').toBe(true)
     })
   }
 })

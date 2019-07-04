@@ -14,13 +14,13 @@ function orientation(buffer) {
   const view = new DataView(buffer)
 
   if (!isJPEG(view)) {
-    return null
+    return
   }
 
   const exifOffset = getExifPosition(view)
 
   if (!exifOffset) {
-    return null
+    return
   }
 
   return getOrientation(view, exifOffset)

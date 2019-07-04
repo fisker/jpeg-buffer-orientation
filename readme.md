@@ -85,7 +85,7 @@ getOrientation(buffer)
 
 - @returns
 
-  type: `Number|null`
+  type: `Number|undefined`
 
 ## FYI
 

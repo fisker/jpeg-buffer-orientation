@@ -105,7 +105,7 @@
     var result = validateEXIFData(view, offset)
 
     if (!result) {
-      return null
+      return
     }
 
     var tiffOffset = result.tiffOffset,
@@ -118,7 +118,7 @@
       var entryOffset = start + i * 12 + 2
 
       if (entryOffset > view.byteLength - 16) {
-        return null
+        return
       } // skip type check
       // var type = view.getUint16(entryOffset+2, littleEndian)
       // var numValues = view.getUint32(entryOffset+4, littleEndian)
@@ -129,14 +129,12 @@
         var orientation = view.getUint16(entryOffset + 8, littleEndian)
 
         if (orientation < 1 || orientation > 8) {
-          return null
+          return
         }
 
         return orientation
       }
     }
-
-    return null
   }
 
   // get orientation from a Arraybuffer
@@ -146,13 +144,13 @@
     var view = new DataView(buffer)
 
     if (!isJPEG(view)) {
-      return null
+      return
     }
 
     var exifOffset = getExifPosition(view)
 
     if (!exifOffset) {
-      return null
+      return
     }
 
     return getOrientation(view, exifOffset)

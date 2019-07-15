@@ -32,7 +32,6 @@
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
     "release": "run-s clean lint build test docs format dist",
     "test": "jest",
     "test-coverage": "jest --coverage"
@@ -75,8 +74,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-filesize": "^6.1.1",
     "rollup-plugin-prettier": "^0.6.0",
-    "rollup-plugin-terser": "^5.1.1",
-    "stylelint": "10.1.0"
+    "rollup-plugin-terser": "^5.1.1"
   },
   "sideEffects": false
 }

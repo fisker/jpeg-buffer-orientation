@@ -17,22 +17,25 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "docs": "run-p docs:*",
-    "docs:js": "cpy lib docs/lib",
-    "docs:image": "cpy __tests__/fixture docs/images",
-    "docs:html": "cpy src/index.html docs",
+    "clean": "rimraf lib docs",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
-    "clean": "rimraf lib docs",
-    "test-coverage": "jest --coverage",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue}",
-    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s clean lint build test docs format dist",
-    "test": "jest",
+    "docs": "run-p docs:*",
+    "docs:html": "cpy src/index.html docs",
+    "docs:image": "cpy __tests__/fixture docs/images",
+    "docs:js": "cpy lib docs/lib",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:stylelint": "yarn lint:stylelint --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "release": "run-s clean lint build test docs format dist",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "config": {
     "commitizen": {
@@ -56,6 +59,7 @@
     "@fisker/husky-config": "^1.1.0",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
+    "@fisker/stylelint-config": "1.1.5",
     "babel-jest": "^24.8.0",
     "cpy-cli": "^2.0.0",
     "cz-conventional-changelog-emoji": "^0.1.0",
@@ -71,7 +75,8 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-filesize": "^6.1.1",
     "rollup-plugin-prettier": "^0.6.0",
-    "rollup-plugin-terser": "^5.1.1"
+    "rollup-plugin-terser": "^5.1.1",
+    "stylelint": "10.1.0"
   },
   "sideEffects": false
 }

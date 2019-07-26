@@ -56,7 +56,7 @@
     "@fisker/eslint-config": "^1.2.8",
     "@fisker/eslint-config-jest": "^1.1.1",
     "@fisker/husky-config": "^1.1.0",
-    "@fisker/lint-staged-config": "^1.0.4",
+    "@fisker/lint-staged-config": "^1.0.5",
     "@fisker/prettier-config": "^1.0.18",
     "@fisker/stylelint-config": "1.1.5",
     "babel-jest": "^24.8.0",

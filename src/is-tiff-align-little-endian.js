@@ -11,6 +11,7 @@ function isLittleEndian(view, offset) {
     return false
   }
 
+  /* istanbul ignore next */
   // "Not valid TIFF data! (no 0x4949 or 0x4D4D)"
   return null
 }

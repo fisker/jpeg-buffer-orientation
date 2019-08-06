@@ -23,6 +23,7 @@ function getExifPosition(view) {
     offset += view.getUint16(offset)
   }
 
+  /* istanbul ignore next */
   return null
 }
 

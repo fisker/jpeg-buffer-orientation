@@ -38,6 +38,7 @@ function getExifPosition(view) {
     offset += 2
     offset += view.getUint16(offset)
   }
+  /* istanbul ignore next */
 
   return null
 }
@@ -51,7 +52,9 @@ function isLittleEndian(view, offset) {
 
   if (tiffAlign === TIFF_ALIGN_MOTOROLA) {
     return false
-  } // "Not valid TIFF data! (no 0x4949 or 0x4D4D)"
+  }
+  /* istanbul ignore next */
+  // "Not valid TIFF data! (no 0x4949 or 0x4D4D)"
 
   return null
 }
@@ -71,16 +74,20 @@ function validateEXIFData(view, offset) {
 
   var tiffOffset = offset + 6
   var littleEndian = isLittleEndian(view, tiffOffset)
+  /* istanbul ignore if */
 
   if (!isBoolean(littleEndian)) {
     return false
-  } // "Not valid TIFF data! (no 0x002A)"
+  }
+  /* istanbul ignore if */
+  // "Not valid TIFF data! (no 0x002A)"
 
   if (view.getUint16(tiffOffset + 2, littleEndian) !== TIFF_TAG_MARK) {
     return false
   }
 
   var firstIFDOffset = view.getUint32(tiffOffset + 4, littleEndian)
+  /* istanbul ignore if */
 
   if (firstIFDOffset < TIFF_FIRST_IFD_OFFSET) {
     // Not valid TIFF data! (First offset less than 8)

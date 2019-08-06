@@ -14,10 +14,12 @@ function validateEXIFData(view, offset) {
   const tiffOffset = offset + 6
   const littleEndian = isLittleEndia(view, tiffOffset)
 
+  /* istanbul ignore if */
   if (!isBoolean(littleEndian)) {
     return false
   }
 
+  /* istanbul ignore if */
   // "Not valid TIFF data! (no 0x002A)"
   if (view.getUint16(tiffOffset + 2, littleEndian) !== TIFF_TAG_MARK) {
     return false
@@ -25,6 +27,7 @@ function validateEXIFData(view, offset) {
 
   const firstIFDOffset = view.getUint32(tiffOffset + 4, littleEndian)
 
+  /* istanbul ignore if */
   if (firstIFDOffset < TIFF_FIRST_IFD_OFFSET) {
     // Not valid TIFF data! (First offset less than 8)
     return false

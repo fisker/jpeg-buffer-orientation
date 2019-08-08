@@ -49,6 +49,7 @@ function isLittleEndian(view, offset) {
   if (tiffAlign === TIFF_ALIGN_INTEL) {
     return true
   }
+  /* istanbul ignore else */
 
   if (tiffAlign === TIFF_ALIGN_MOTOROLA) {
     return false

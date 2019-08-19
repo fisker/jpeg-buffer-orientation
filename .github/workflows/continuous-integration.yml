@@ -62,9 +62,6 @@ jobs:
         with:
           node-version: ${{ matrix.NODE }}
 
-      - name: Install nyc
-        run: npm install --global nyc
-
       - name: Install Dependencies
         run: yarn
 

@@ -1,6 +1,6 @@
 {
   "name": "jpeg-buffer-orientation",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "get orientation from a jpeg buffer",
   "main": "lib/index.common.js",
   "module": "lib/index.min.mjs",

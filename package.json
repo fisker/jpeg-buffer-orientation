@@ -56,7 +56,7 @@
     "@fisker/eslint-config-jest": "1.1.13",
     "@fisker/husky-config": "1.1.5",
     "@fisker/lint-staged-config": "1.0.8",
-    "@fisker/prettier-config": "1.0.22",
+    "@fisker/prettier-config": "1.0.24",
     "babel-jest": "24.9.0",
     "cpy-cli": "2.0.0",
     "cz-conventional-changelog": "3.0.2",

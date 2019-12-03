@@ -2,34 +2,42 @@
   "name": "jpeg-buffer-orientation",
   "version": "2.0.2",
   "description": "get orientation from a jpeg buffer",
-  "main": "lib/index.common.js",
-  "module": "lib/index.min.mjs",
-  "browser": "lib/index.min.js",
-  "unpkg": "lib/index.min.js",
-  "jsdelivr": "lib/index.min.js",
   "repository": "git@github.com:fisker/jpeg-buffer-orientation.git",
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.common.js",
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
+  "module": "dist/index.min.mjs",
+  "browser": "dist/index.min.js",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "clean": "rimraf lib docs",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist docs",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "docs": "run-p docs:*",
     "docs:html": "cpy src/index.html docs",
     "docs:image": "cpy __tests__/fixture docs/images",
-    "docs:js": "cpy lib docs/lib",
+    "docs:js": "cpy dist docs/dist",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test docs format dist",
     "test": "jest",
@@ -40,13 +48,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "lib"
-  ],
   "devDependencies": {
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
@@ -60,6 +61,7 @@
     "babel-jest": "24.9.0",
     "cpy-cli": "2.0.0",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.7.2",
     "husky": "3.1.0",
     "jest": "24.9.0",
@@ -68,12 +70,15 @@
     "npm-run-all": "4.1.5",
     "nyc": "14.1.1",
     "prettier": "1.19.1",
-    "rimraf": "3.0.0",
     "rollup": "1.27.8",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-filesize": "6.2.1",
     "rollup-plugin-prettier": "0.6.0",
-    "rollup-plugin-terser": "5.1.2"
+    "rollup-plugin-terser": "5.1.2",
+    "sort-package-json": "1.30.0"
   },
-  "sideEffects": false
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

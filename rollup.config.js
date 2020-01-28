@@ -1,5 +1,4 @@
 import babel from 'rollup-plugin-babel'
-import filesize from 'rollup-plugin-filesize'
 import prettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
 
@@ -13,12 +12,11 @@ const plugins = [
   babel(),
   prettier({
     ...prettierConfig,
-    sourceMap: true,
+    sourcemap: true,
   }),
-  filesize(),
 ]
 
-const minify = [babel(), terser(), filesize()]
+const minify = [babel(), terser()]
 
 const moduleName = 'getOrientation'
 

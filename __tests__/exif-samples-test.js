@@ -10,7 +10,7 @@ const fixtures = glob
   .sync('**/*.{jpg,jpeg}', {
     cwd: directory,
   })
-  .map(file => ({
+  .map((file) => ({
     name: file,
     file: join(directory, file),
   }))

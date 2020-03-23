@@ -17,7 +17,7 @@ const fixtures = [
     name: `image_unknown_orientation.jpg`,
     orientation: undefined,
   },
-].map(fixture => ({
+].map((fixture) => ({
   ...fixture,
   file: join(fixtureDirectory, fixture.name),
 }))

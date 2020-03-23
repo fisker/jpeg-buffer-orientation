@@ -50,7 +50,7 @@ const minifiedBuilds = {
   ...builds,
   output: builds.output
     .filter(({format}) => format !== 'cjs')
-    .map(config => ({
+    .map((config) => ({
       ...config,
       file: config.file.replace(/(\.m?js)$/, '.min$1'),
     })),

@@ -36,7 +36,7 @@ in browser
   // this time we use fetch to get a ArrayBuffer
 
   ;(async () => {
-    const reponse = await fetch(myJPEGFile)
+    const response = await fetch(myJPEGFile)
     const buffer = await response.arrayBuffer()
     const orientation = getOrientation(buffer)
 

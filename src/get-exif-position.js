@@ -10,7 +10,7 @@ function getExifPosition(view) {
   while (offset < byteLength) {
     // Not a valid marker
     if (view.getUint8(offset) !== 0xff) {
-      return null
+      return
     }
 
     const marker = view.getUint16(offset)
@@ -22,9 +22,6 @@ function getExifPosition(view) {
     offset += 2
     offset += view.getUint16(offset)
   }
-
-  /* istanbul ignore next */
-  return null
 }
 
 export default getExifPosition

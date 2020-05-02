@@ -10,11 +10,11 @@ const fixtures = [
     orientation: index + 1,
   })),
   {
-    name: `image_no_orientation.jpg`,
+    name: 'image_no_orientation.jpg',
     orientation: undefined,
   },
   {
-    name: `image_unknown_orientation.jpg`,
+    name: 'image_unknown_orientation.jpg',
     orientation: undefined,
   },
 ].map((fixture) => ({
@@ -35,7 +35,7 @@ describe('jpeg image orientation', () => {
 })
 
 describe('non-jpeg image orientation', () => {
-  test(`text file orientation should be undefined`, () => {
+  test('text file orientation should be undefined', () => {
     const {buffer} = readFileSync(__filename)
     const result = getOrientation(buffer)
     expect(typeof result).toBe('undefined')

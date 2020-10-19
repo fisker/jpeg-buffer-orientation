@@ -63,7 +63,7 @@
     "@fisker/husky-config": "3.1.1",
     "@fisker/lint-staged-config": "2.2.0",
     "@fisker/prettier-config": "3.1.2",
-    "babel-jest": "26.5.2",
+    "babel-jest": "26.6.0",
     "cpy-cli": "3.1.1",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "3.0.1",

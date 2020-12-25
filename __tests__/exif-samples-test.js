@@ -1,18 +1,18 @@
 import {readFileSync} from 'fs'
-import {join} from 'path'
+import path from 'path'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import glob from 'fast-glob'
 
 import getOrientation from '../src'
 
-const directory = join(__dirname, 'exif-samples')
+const directory = path.join(__dirname, 'exif-samples')
 const fixtures = glob
   .sync('**/*.{jpg,jpeg}', {
     cwd: directory,
   })
   .map((file) => ({
     name: file,
-    file: join(directory, file),
+    file: path.join(directory, file),
   }))
 
 describe('more jpeg test', () => {

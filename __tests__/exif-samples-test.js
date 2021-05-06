@@ -1,5 +1,5 @@
-import {readFileSync} from 'fs'
-import path from 'path'
+import {readFileSync} from 'node:fs'
+import path from 'node:path'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import glob from 'fast-glob'
 

@@ -1,4 +1,6 @@
+// eslint-disable-next-line unicorn/prefer-node-protocol
 import {readFileSync} from 'fs'
+// eslint-disable-next-line unicorn/prefer-node-protocol
 import path from 'path'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import glob from 'fast-glob'

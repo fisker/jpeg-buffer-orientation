@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel'
+import {babel} from '@rollup/plugin-babel'
 import prettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
 

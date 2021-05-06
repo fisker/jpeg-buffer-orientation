@@ -1,5 +1,7 @@
-import {readFileSync} from 'node:fs'
-import path from 'node:path'
+// eslint-disable-next-line unicorn/prefer-node-protocol
+import {readFileSync} from 'fs'
+// eslint-disable-next-line unicorn/prefer-node-protocol
+import path from 'path'
 
 import getOrientation from '../src'
 

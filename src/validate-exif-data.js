@@ -6,7 +6,7 @@ function validateEXIFData(view, offset) {
   // Not valid EXIF data! NO 'Exif' found
   if (
     view.getUint32(offset) !== EXIF_START ||
-    view.getUint16(offset + 4) !== 0x0000
+    view.getUint16(offset + 4) !== 0x00_00
   ) {
     return false
   }

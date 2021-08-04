@@ -11,9 +11,7 @@ const prettierConfig = {
   singleQuote: true,
 }
 
-const commonPlugins = [
-  rollupPluginBabel(),
-]
+const commonPlugins = [rollupPluginBabel()]
 
 const plugins = [
   ...commonPlugins,

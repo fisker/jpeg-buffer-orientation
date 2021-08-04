@@ -1,11 +1,10 @@
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import {readFileSync} from 'fs'
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import path from 'path'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import glob from 'fast-glob'
+// import createEsmUtils from 'esm-utils'
+import getOrientation from '../src/index.js'
 
-import getOrientation from '../src'
+// const {__dirname} = createEsmUtils(import.meta)
 
 const directory = path.join(__dirname, 'exif-samples')
 const fixtures = glob

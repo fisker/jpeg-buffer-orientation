@@ -1,9 +1,9 @@
 import {babel} from '@rollup/plugin-babel'
 import prettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
-import createEsmUtils from 'esm-utils';
+import createEsmUtils from 'esm-utils'
 
-const {require} = createEsmUtils(import.meta);
+const {require} = createEsmUtils(import.meta)
 
 const prettierConfig = {
   ...require('./prettier.config.cjs'),

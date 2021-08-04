@@ -1,9 +1,9 @@
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import {readFileSync} from 'fs'
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import path from 'path'
+// import createEsmUtils from 'esm-utils'
+import getOrientation from '../src/index.js'
 
-import getOrientation from '../src'
+// const {__dirname, __filename} = createEsmUtils(import.meta)
 
 const fixtureDirectory = path.join(__dirname, 'fixture')
 const fixtures = [

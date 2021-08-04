@@ -15,16 +15,16 @@
     "url": "https://www.fiskercheung.com/"
   },
   "sideEffects": false,
-  "main": "dist/index.cjs",
-  "jsdelivr": "dist/index.min.js",
-  "unpkg": "dist/index.min.js",
-  "module": "dist/index.min.mjs",
-  "browser": "dist/index.min.js",
   "type": "module",
   "exports": {
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
   },
+  "main": "dist/index.cjs",
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
+  "module": "dist/index.min.mjs",
+  "browser": "dist/index.min.js",
   "files": [
     "dist"
   ],
@@ -45,10 +45,10 @@
     "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
     "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:eslint": "eslint \"**/*.{js,cjs,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:package-json": "yarn run format:package-json --check",
-    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,cjs,mjs,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s clean lint build test docs format dist",
     "test": "jest",
     "test-coverage": "jest --coverage"
@@ -75,6 +75,7 @@
     "del-cli": "4.0.1",
     "eslint": "7.32.0",
     "esm-utils": "1.1.0",
+    "fast-glob": "3.2.7",
     "husky": "7.0.1",
     "jest": "27.0.6",
     "lint-staged": "11.1.1",

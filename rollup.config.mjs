@@ -1,9 +1,12 @@
 import {babel} from '@rollup/plugin-babel'
 import prettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
+import createEsmUtils from 'esm-utils';
+
+const {require} = createEsmUtils(import.meta);
 
 const prettierConfig = {
-  ...require('./prettier.config'),
+  ...require('./prettier.config.cjs'),
   parser: 'babel',
   singleQuote: true,
 }
@@ -32,7 +35,7 @@ const builds = {
     },
     // umd build
     {
-      file: 'dist/index.common.js',
+      file: 'dist/index.cjs',
       format: 'cjs',
       sourcemap: true,
     },

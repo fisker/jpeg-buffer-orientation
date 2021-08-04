@@ -3,10 +3,9 @@
 // https://github.com/dominictarr/exif-orientation-lite/blob/master/index.js
 // https://github.com/exif-js/exif-js/blob/master/exif.js
 
-import globalThis from './global-this'
-import isJPEG from './is-jpeg'
-import getExifPosition from './get-exif-position'
-import getOrientation from './get-orientation'
+import isJPEG from './is-jpeg.js'
+import getExifPosition from './get-exif-position.js'
+import getOrientation from './get-orientation.js'
 
 const {DataView} = globalThis
 

@@ -1,4 +1,4 @@
-import {APP1_MARKER} from './constants'
+import {APP1_MARKER} from './constants.js'
 
 // https://github.com/dominictarr/exif-orientation-lite/blob/master/index.js
 // https://github.com/exif-js/exif-js/blob/master/exif.js

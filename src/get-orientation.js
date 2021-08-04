@@ -1,6 +1,6 @@
-import {TIFF_ORIENTATION_TAG_NO} from './constants'
+import {TIFF_ORIENTATION_TAG_NO} from './constants.js'
 
-import validateEXIFData from './validate-exif-data'
+import validateEXIFData from './validate-exif-data.js'
 
 function getOrientation(view, offset) {
   const result = validateEXIFData(view, offset)

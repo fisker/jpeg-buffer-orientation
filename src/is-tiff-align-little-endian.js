@@ -1,4 +1,4 @@
-import {TIFF_ALIGN_MOTOROLA, TIFF_ALIGN_INTEL} from './constants'
+import {TIFF_ALIGN_MOTOROLA, TIFF_ALIGN_INTEL} from './constants.js'
 
 function isLittleEndian(view, offset) {
   const tiffAlign = view.getUint16(offset)

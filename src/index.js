@@ -7,8 +7,6 @@ import isJPEG from './is-jpeg.js'
 import getExifPosition from './get-exif-position.js'
 import getOrientation from './get-orientation.js'
 
-const {DataView} = globalThis
-
 function orientation(buffer) {
   const view = new DataView(buffer)
 

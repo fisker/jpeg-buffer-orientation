@@ -1,6 +1,6 @@
-import {babel} from '@rollup/plugin-babel'
-import prettier from 'rollup-plugin-prettier'
-import {terser} from 'rollup-plugin-terser'
+import {babel as rollupPluginBabel} from '@rollup/plugin-babel'
+import rollupPluginPrettier from 'rollup-plugin-prettier'
+import {terser as rollupPluginTerser} from 'rollup-plugin-terser'
 import createEsmUtils from 'esm-utils'
 
 const {require} = createEsmUtils(import.meta)
@@ -11,15 +11,19 @@ const prettierConfig = {
   singleQuote: true,
 }
 
+const commonPlugins = [
+  rollupPluginBabel(),
+]
+
 const plugins = [
-  babel(),
-  prettier({
+  ...commonPlugins,
+  rollupPluginPrettier({
     ...prettierConfig,
     sourcemap: true,
   }),
 ]
 
-const minify = [babel(), terser()]
+const minify = [...commonPlugins, rollupPluginTerser()]
 
 const moduleName = 'getOrientation'
 
@@ -33,11 +37,12 @@ const builds = {
       name: moduleName,
       sourcemap: true,
     },
-    // umd build
+    // CommonJS build
     {
       file: 'dist/index.cjs',
       format: 'cjs',
       sourcemap: true,
+      exports: 'auto',
     },
     // esm build
     {

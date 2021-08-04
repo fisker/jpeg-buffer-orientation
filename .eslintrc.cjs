@@ -15,10 +15,7 @@ module.exports = {
   settings: {},
   rules: {},
   plugins: [],
-  globals: {
-    Uint8Array: false,
-    DataView: false,
-  },
+  globals: {},
   overrides: [
     {
       files: ['__tests__/**/*'],

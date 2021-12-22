@@ -20,7 +20,7 @@ describe('more jpeg test', () => {
   for (const image of fixtures) {
     const {name, file} = image
 
-    test(`${name}`, () => {
+    test(`File ${name}`, () => {
       const {buffer} = readFileSync(file)
       const result = getOrientation(buffer)
 

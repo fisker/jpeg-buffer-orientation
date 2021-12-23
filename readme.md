@@ -15,7 +15,7 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![MIT license](https://img.shields.io/github/license/fisker/jpeg-buffer-orientation.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-> get orientation from a jpeg buffer
+> Get orientation of JPEG file.
 
 ## Install
 

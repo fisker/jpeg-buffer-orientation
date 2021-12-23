@@ -1,7 +1,7 @@
 {
   "name": "jpeg-buffer-orientation",
   "version": "4.1.0",
-  "description": "get orientation from a jpeg buffer",
+  "description": "Get orientation of JPEG file.",
   "homepage": "https://github.com/fisker/jpeg-buffer-orientation#readme",
   "bugs": {
     "url": "https://github.com/fisker/jpeg-buffer-orientation/issues"

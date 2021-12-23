@@ -7,7 +7,7 @@ Get orientation of JPEG file.
 
 @example
 ```
-import getOrientation from 'jpeg-buffer-orientation';
+import getOrientation from 'jpeg-buffer-orientation'
 
 const orientation = getOrientation(buffer)
 ```

@@ -26,7 +26,8 @@
   "module": "dist/index.min.mjs",
   "browser": "dist/index.min.js",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "run-p build:*",
@@ -92,5 +93,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "typing": "./index.d.ts"
 }

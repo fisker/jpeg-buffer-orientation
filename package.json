@@ -25,6 +25,7 @@
   "unpkg": "dist/index.min.js",
   "module": "dist/index.min.mjs",
   "browser": "dist/index.min.js",
+  "typings": "./index.d.ts",
   "files": [
     "dist",
     "index.d.ts"
@@ -93,6 +94,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "typing": "./index.d.ts"
+  }
 }

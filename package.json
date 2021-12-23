@@ -25,8 +25,10 @@
   "unpkg": "dist/index.min.js",
   "module": "dist/index.min.mjs",
   "browser": "dist/index.min.js",
+  "typings": "./index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "run-p build:*",

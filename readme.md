@@ -31,17 +31,11 @@ in browser
 <script type="module">
   import getOrientation from 'https://unpkg.com/jpeg-buffer-orientation?module'
 
-  const myJPEGFile = 'path/to/a/jpeg/file'
+  const response = await fetch('./foo.jpg')
+  const buffer = await response.arrayBuffer()
+  const orientation = getOrientation(buffer)
 
-  // this time we use fetch to get a ArrayBuffer
-
-  ;(async () => {
-    const response = await fetch(myJPEGFile)
-    const buffer = await response.arrayBuffer()
-    const orientation = getOrientation(buffer)
-
-    console.log('orientation', orientation)
-  })()
+  console.log('orientation', orientation)
 </script>
 ```
 
@@ -52,32 +46,26 @@ in browser (legacy)
 ```html
 <script src="https://unpkg.com/jpeg-buffer-orientation"></script>
 <script>
-  const blob = someJPEGBlob
-
-  // this time we use FileReader to get a ArrayBuffer
-
-  const fileReader = new FileReader()
-  fileReader.readAsArrayBuffer(blob)
-  fileReader.onload = () => {
-    console.log(getOrientation(fileReader.result))
-  }
+  const buffer = myJpegFile.arrayBuffer()
+  console.log(getOrientation(buffer))
 </script>
 ```
 
-in node
+in node (not recommended)
 
 ```js
+import fs from 'node:fs/promises'
 import getOrientation from 'jpeg-buffer-orientation'
 
-const myJPEGFile = 'path/to/a/jpeg/file'
-const {buffer} = readFileSync(myJPEGFile)
+const myJpegFile = new URL('./foo.jpg', import.meta.url)
+const {buffer} = await fs.readFile(myJpegFile)
 const orientation = getOrientation(buffer)
 console.log('orientation', orientation)
 ```
 
 ## API
 
-getOrientation(buffer)
+getJpegOrientation(buffer)
 
 - buffer
 
@@ -93,7 +81,3 @@ this package is design for use in browser, not optimized for node.
 
 1. accept `Buffer` instead of `ArrayBuffer` should be easier to use.
 2. instead of reading the whole image, just reading head maybe better.
-
-## License
-
-MIT © [fisker Cheung](https://github.com/fisker)

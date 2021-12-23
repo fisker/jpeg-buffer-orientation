@@ -2,7 +2,7 @@ import {EXIF_START, TIFF_FIRST_IFD_OFFSET, TIFF_TAG_MARK} from './constants.js'
 import isLittleEndia from './is-tiff-align-little-endian.js'
 import isBoolean from './is-boolean.js'
 
-function validateEXIFData(view, offset) {
+function validateExifData(view, offset) {
   // Not valid EXIF data! NO 'Exif' found
   if (
     view.getUint32(offset) !== EXIF_START ||
@@ -40,4 +40,4 @@ function validateEXIFData(view, offset) {
   }
 }
 
-export default validateEXIFData
+export default validateExifData

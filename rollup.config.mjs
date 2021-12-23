@@ -26,7 +26,7 @@ const minify = [...commonPlugins, rollupPluginTerser()]
 const moduleName = 'getOrientation'
 
 const builds = {
-  input: 'src/index.js',
+  input: 'index.js',
   output: [
     // umd build
     {

@@ -1,7 +1,7 @@
 import {readFileSync} from 'fs'
 import path from 'path'
 // import createEsmUtils from 'esm-utils'
-import getOrientation from '../src/index.js'
+import getOrientation from '../index.js'
 
 // const {__dirname, __filename} = createEsmUtils(import.meta)
 

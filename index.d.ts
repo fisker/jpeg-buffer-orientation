@@ -1,15 +1,17 @@
-export type JpegBufferOrientation = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+export type Orientation = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
 /**
-Get orientation of a jpeg file.
+Get orientation of JPEG file.
 
-@param buffer - ArrayBuffer of jpeg file.
+@param buffer - ArrayBuffer of JPEG file.
 
 @example
 ```
-import getJpegBufferOrientation from 'jpeg-buffer-orientation';
+import getOrientation from 'jpeg-buffer-orientation';
 
-getJpegBufferOrientation(buffer)
+const orientation = getOrientation(buffer)
 ```
 */
-export default function getJpegBufferOrientation (buffer: ArrayBuffer): JpegBufferOrientation | void;
+export default function getJpegOrientation(
+  buffer: ArrayBuffer,
+): Orientation | void

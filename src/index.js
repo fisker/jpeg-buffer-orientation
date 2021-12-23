@@ -7,7 +7,7 @@ import isJpeg from './is-jpeg.js'
 import getExifPosition from './get-exif-position.js'
 import getOrientation from './get-orientation.js'
 
-function getJpegBufferOrientation(buffer) {
+function getJpegOrientation(buffer) {
   const view = new DataView(buffer)
 
   if (!isJpeg(view)) {
@@ -23,4 +23,4 @@ function getJpegBufferOrientation(buffer) {
   return getOrientation(view, exifOffset)
 }
 
-export default getJpegBufferOrientation
+export default getJpegOrientation

@@ -78,7 +78,7 @@
     "del-cli": "4.0.1",
     "eslint": "8.6.0",
     "esm-utils": "2.0.1",
-    "fast-glob": "3.2.7",
+    "fast-glob": "3.2.9",
     "husky": "7.0.4",
     "jest": "27.4.7",
     "lint-staged": "12.1.7",

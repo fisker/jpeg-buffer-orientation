@@ -76,7 +76,7 @@
     "cpy-cli": "4.1.0",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "4.0.1",
-    "eslint": "8.16.0",
+    "eslint": "8.17.0",
     "esm-utils": "4.0.0",
     "fast-glob": "3.2.11",
     "husky": "8.0.1",

@@ -75,7 +75,7 @@
     "core-js": "3.23.5",
     "cpy-cli": "4.1.0",
     "cz-conventional-changelog": "3.3.0",
-    "del-cli": "4.0.1",
+    "del-cli": "5.0.0",
     "eslint": "8.20.0",
     "esm-utils": "4.0.0",
     "fast-glob": "3.2.11",

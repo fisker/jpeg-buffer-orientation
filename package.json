@@ -71,7 +71,7 @@
     "@fisker/lint-staged-config": "3.1.6",
     "@fisker/prettier-config": "5.0.7",
     "@rollup/plugin-babel": "6.0.3",
-    "babel-jest": "29.4.1",
+    "babel-jest": "29.4.2",
     "core-js": "3.27.2",
     "cpy-cli": "4.2.0",
     "cz-conventional-changelog": "3.3.0",

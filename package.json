@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.26.7",
-    "@babel/preset-env": "7.26.7",
+    "@babel/preset-env": "7.26.9",
     "@commitlint/cli": "17.8.1",
     "@fisker/commitlint-config": "2.0.5",
     "@fisker/eslint-config": "10.4.0",
